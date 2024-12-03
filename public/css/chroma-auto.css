@@ -1,0 +1,4 @@
+/* prettier-ignore */
+@import 'chroma-relearn-light.css?1733219100' screen and (prefers-color-scheme: light);
+/* prettier-ignore */
+@import 'chroma-relearn-dark.css?1733219100' screen and (prefers-color-scheme: dark);
