@@ -16,7 +16,18 @@ This study presents a novel framework for precise force control of fin-actuated 
 ![Image](https://github.com/user-attachments/assets/7909b1e8-5c09-4f3f-9c3b-6f60d0028ecb)
 
 ## Video
+{{< youtube kXK6Rg0H76Y >}}
 
-{{< raw >}}
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kXK6Rg0H76Y?si=4XVkMijuWN55-YXL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
- {{< /raw >}} 
+## Cite
+
+ {{% tab title="bibtex" %}}
+```c
+@inproceedings{hamamatsu2025underwater,
+            title={Underwater Soft Fin Flapping Motion with Deep Neural Network Based Surrogate Model}, 
+            author={Hamamatsu, Yuya and Kupyn, Pavlo and Gkliva, Roza and Asko, Ristolainen and  Kruusmaa, Maarja},
+            booktitle={IEEE-RAS International Conference on Soft Robotics (RoboSoft)},
+            year={2025},
+            organization={IEEE}
+}
+```
+{{% /tab %}}
