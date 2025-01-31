@@ -1,7 +1,7 @@
 +++
 date = '2025-01-31T10:50:46+02:00'
 draft = false
-title = 'Robosoft2025'
+title = 'Robosoft25'
 math = true
 weight = 2
 +++
@@ -47,11 +47,11 @@ Experiments validate the effectiveness of this approach by comparing single-poli
  {{% tab title="bibtex" %}}
 ```c
 @inproceedings{hamamatsu2025underwater,
-            title={Underwater Soft Fin Flapping Motion with Deep Neural Network Based Surrogate Model}, 
-            author={Hamamatsu, Yuya and Kupyn, Pavlo and Gkliva, Roza and Asko, Ristolainen and  Kruusmaa, Maarja},
-            booktitle={IEEE-RAS International Conference on Soft Robotics (RoboSoft)},
-            year={2025},
-            organization={IEEE}
+    title={Underwater Soft Fin Flapping Motion with Deep Neural Network Based Surrogate Model}, 
+    author={Hamamatsu, Yuya and Kupyn, Pavlo and Gkliva, Roza and Asko, Ristolainen and  Kruusmaa, Maarja},
+    booktitle={IEEE-RAS International Conference on Soft Robotics (RoboSoft)},
+    year={2025},
+    organization={IEEE}
 }
 ```
 {{% /tab %}}
