@@ -10,7 +10,7 @@ weight = 2
 
 Yuya Hamamatsu*, Pavlo Kupyn* ** , Roza Gkliva*, Asko Ristolainen*, Maarja Kruusmaa*
 
-*Tallinn University of Technology, **Vilnius University
+*[Tallinn University of Technology](https://taltech.ee/en/biorobotics), **Vilnius University
 
 {{% button href="https://github.com/Centre-for-Biorobotics/ML-soft-fin-motion-RoboSoft2025/" style="grey" icon="fa-fw fab fa-github" %}}Code{{% /button %}}
 
