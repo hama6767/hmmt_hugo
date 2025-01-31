@@ -5,4 +5,4 @@ title = 'Research'
 collapsibleMenu=true
 +++
 
-{{% children containerstyle="div" style="h2" description=true %}}
+{{% children containerstyle="div" style="h3" description=true %}}
