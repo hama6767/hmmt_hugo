@@ -1,41 +1,64 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article">
-  <head>
+<html lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.0-DEV">
-    <meta name="generator" content="Relearn 7.1.1+d3bf75bfc71ca7e3f5e86174309e9d491aacec65">
+    <meta name="generator" content="Hugo 0.142.0">
+    <meta name="generator" content="Relearn 7.3.2+db9ca5d2958a7e5956d4f37f6d79e8d2076b8381">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Categories :: My New Hugo Site">
-    <meta property="og:url" content="https://example.org/categories/index.html">
-    <meta property="og:site_name" content="My New Hugo Site">
-    <meta property="og:title" content="Categories :: My New Hugo Site">
+    <meta name="twitter:title" content="Categories :: Y.HMMT">
+    <meta property="og:url" content="http://localhost:1313/categories/index.html">
+    <meta property="og:site_name" content="Y.HMMT">
+    <meta property="og:title" content="Categories :: Y.HMMT">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Categories :: My New Hugo Site">
-    <title>Categories :: My New Hugo Site</title>
-    <link href="/categories/index.xml" rel="alternate" type="application/rss+xml" title="Categories :: My New Hugo Site">
-    <link href="/css/fontawesome-all.min.css?1733219100" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733219100" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1733219100" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733219100" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733219100" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1733219100" rel="stylesheet">
-    <link href="/css/fonts.css?1733219100" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733219100" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1733219100" rel="stylesheet">
-    <link href="/css/theme-auto.css?1733219100" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-auto.css?1733219100" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/print.css?1733219100" rel="stylesheet" media="print">
-    <script src="/js/variant.js?1733219100"></script>
+    <meta itemprop="name" content="Categories :: Y.HMMT">
+    <title>Categories :: Y.HMMT</title>
+    <link href="/categories/index.xml" rel="alternate" type="application/rss+xml" title="Categories :: Y.HMMT">
+    <link href="/css/fontawesome-all.min.css?1738319095" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1738319095" rel="stylesheet"></noscript>
+    <link href="/css/auto-complete.css?1738319095" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1738319095" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1738319095" rel="stylesheet">
+    <link href="/css/theme.css?1738319095" rel="stylesheet">
+    <link href="/css/format-html.css?1738319095" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..';
       window.relearn.relBaseUri='..';
-      window.relearn.absBaseUri='https:\/\/example.org';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.min = ``;
       window.relearn.disableAnchorCopy=false;
       window.relearn.disableAnchorScrolling=false;
       // variant stuff
-      window.variants && variants.init( [ 'auto' ] );
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantname = "my-custom-variant";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        var select = document.querySelector("#R-select-variant");
+        if (select) {
+          select.value = variant;
+        }
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( variant == window.relearn.customvariantname ){
+        }else if( !variant || !window.relearn.themevariants.includes(variant) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
       // translations
       window.T_Copy_to_clipboard = `Copy to clipboard`;
       window.T_Copied_to_clipboard = `Copied to clipboard!`;
@@ -64,11 +87,11 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">My New Hugo Site</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Y.HMMT</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Categories</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/index.html" title="My New Hugo Site (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/index.html" title="Y.HMMT (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
             </div>
@@ -103,11 +126,11 @@
       <div id="R-header-wrapper" class="default-animation">
         <div id="R-header" class="default-animation">
           <a id="R-logo" class="R-default" href="/index.html">
-My New Hugo Site
+            Y.HMMT
           </a>
         </div>
         <script>
-          window.index_js_url="/searchindex.en.js?1733219100";
+          window.index_js_url="/searchindex.en.js?1738319095";
         </script>
         <search><form action="/search/index.html" method="get">
           <div class="searchbox default-animation">
@@ -120,12 +143,12 @@ My New Hugo Site
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1733219100" defer></script>
-        <script src="/js/lunr/lunr.min.js?1733219100" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1733219100" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1733219100" defer></script>
-        <script src="/js/lunr/lunr.en.min.js?1733219100" defer></script>
-        <script src="/js/search.js?1733219100" defer></script>
+        <script src="/js/auto-complete.js?1738319095" defer></script>
+        <script src="/js/lunr/lunr.min.js?1738319095" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1738319095" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1738319095" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1738319095" defer></script>
+        <script src="/js/search.js?1738319095" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -163,13 +186,13 @@ My New Hugo Site
                   <span>&nbsp;</span>
                   <div class="control-style">
                     <label class="a11y-only" for="R-select-variant">Theme</label>
-                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <select id="R-select-variant" onchange="window.relearn.changeVariant( this.value );">
                       <option id="R-select-variant-auto" value="auto" selected>Auto</option>
                     </select>
                   </div>
                   <div class="clear"></div>
                 </div>
-                <script>window.variants && variants.markSelectedVariant();</script>
+                <script>window.relearn.markVariant();</script>
               </li>
               <li class="footerVisitedLinks">
                 <div class="padding menu-control">
@@ -189,8 +212,8 @@ My New Hugo Site
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1733219100" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1733219100" defer></script>
-    <script src="/js/theme.js?1733219100" defer></script>
+    <script src="/js/clipboard.min.js?1738319095" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1738319095" defer></script>
+    <script src="/js/theme.js?1738319095" defer></script>
   </body>
 </html>

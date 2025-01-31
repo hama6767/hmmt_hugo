@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://example.org/index.html</link>
-    <description></description>
+    <title>Y.HMMT</title>
+    <link>http://localhost:1313/index.html</link>
+    <description>Hi, I’m guitar player. My interest is heavy metal&#xA;CV Todo&#xA;Research Project Fig Conf/journal Title ICRA 2025 Cross-platform Learning-based Fault Tolerant Surfacing Controller for Underwater Robots RoboSoft 2025 Underwater Soft Fin Flapping Motion with Deep Neural Network Based Surrogate Model</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 31 Jan 2025 10:50:30 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Research</title>
+      <link>http://localhost:1313/research/index.html</link>
+      <pubDate>Fri, 31 Jan 2025 10:50:30 +0200</pubDate>
+      <guid>http://localhost:1313/research/index.html</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

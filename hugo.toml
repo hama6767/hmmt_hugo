@@ -1,11 +1,9 @@
+theme = "Relearn"
 baseURL = 'https://hmmt.ee/'
 languageCode = 'en-us'
 title = 'Y.HMMT'
-theme = "Relearn"
 sectionPagesMenu = 'main'
-[outputs]
-  home = ['html', 'rss', 'print']
-  section = ['html', 'rss', 'print']
-  page = ['html', 'rss', 'print']
   
-
+[module]
+  [[module.imports]]
+    path = 'github.com/McShelby/hugo-theme-relearn'

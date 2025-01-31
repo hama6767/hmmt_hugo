@@ -2,6 +2,7 @@
 date = '2025-01-31T10:50:46+02:00'
 draft = false
 title = 'Robosoft2025'
+math = true
 weight = 2
 +++
 
@@ -31,7 +32,9 @@ The surrogate model consists of two neural networks: PosNet, a 1D convolutional 
 
 The RL agent operates within this surrogate simulation environment to learn optimal control policies for generating target forces. The policy outputs a target angle and angular velocity, which are processed through the surrogate model to estimate the resulting force. The reward function combines force accuracy with stability constraints using the Sobolev norm, which penalizes both force error and abrupt variations in force output. This formulation ensures that the learned policy not only tracks the desired force but also maintains smooth transitions, preventing instability due to sudden force fluctuations. Proximal Policy Optimization (PPO) with an LSTM-based policy network is employed to handle the sequential dependencies in force control, enabling the RL agent to leverage temporal context for improved decision-making.
 
-$$\| F \|_{W^{1,2}} \approx \left( \sum_{i=0}^{n-1} |F^i - F^r|^2 + \sum_{i=0}^{n-2} |F^{i+1} - F^i|^2 \right)^{1/2}$$
+{{< math align="center" >}}
+$$ \| F \|_{W^{1,2}} \approx \left( \sum_{i=0}^{n-1} |F^i - F^r|^2 + \sum_{i=0}^{n-2} |F^{i+1} - F^i|^2 \right)^{1/2} $$
+{{< /math >}}
 
 To further enhance performance, a grid-switching RL approach is introduced, where multiple policies are trained for different force reference ranges, and the appropriate policy is selected dynamically based on the current target. This strategy prevents degradation in policy performance when extrapolating to force conditions that were not well-represented in training, thereby improving control robustness across a wide range of forces.
 
