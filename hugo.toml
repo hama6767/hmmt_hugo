@@ -4,7 +4,6 @@ languageCode = 'en-us'
 title = 'Y.HMMT'
 alwaysopen = true
 collapsibleMenu = true
-sectionPagesMenu = 'main'
   
 [module]
   [[module.imports]]
