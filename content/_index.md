@@ -2,6 +2,7 @@
 date = '2025-01-31T10:22:34+02:00'
 draft = false
 title = 'Y.HMMT'
+book = true
 +++
 
 Hi, I'm guitar player. My interest is heavy metal
