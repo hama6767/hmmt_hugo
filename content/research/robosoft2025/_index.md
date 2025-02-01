@@ -1,6 +1,7 @@
 +++
 date = '2025-01-31T10:50:46+02:00'
 draft = false
+linkTitle = 'RoboSoft25'
 title = 'Robosoft25'
 math = true
 weight = 2
