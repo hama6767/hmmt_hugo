@@ -15,6 +15,8 @@ Yuya Hamamatsu*, Pavlo Kupyn* ** , Roza Gkliva*, Asko Ristolainen*, Maarja Kruus
 
 {{% button href="https://github.com/Centre-for-Biorobotics/ML-soft-fin-motion-RoboSoft2025/" style="grey" icon="fa-fw fab fa-github" %}}Code{{% /button %}}
 
+{{% button href="https://arxiv.org/abs/2502.03135" icon="fa-solid fa-file-pdf" style="warning" %}}arXiv{{% /button %}}
+
 
 
 ### Abstract
