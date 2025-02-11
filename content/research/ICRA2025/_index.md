@@ -21,7 +21,7 @@ In this paper, we propose a novel cross-platform fault-tolerant surfacing contro
 ![Image](https://github.com/user-attachments/assets/4d24b549-fcd9-42a9-9c12-cb3337fc30df)
 
 ## Video
-Coming soon!
+{{< youtube LpE1XUUMVl0 >}}
 
 ## Overview
 
