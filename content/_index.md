@@ -1,14 +1,18 @@
 +++
 date = '2025-01-31T10:22:34+02:00'
 draft = false
-title = 'Y.HMMT'
+title = 'Yuya Hamamatsu'
 book = true
 +++
 
-Hi, I'm guitar player. My interest is heavy metal
+PhD student at Taltech. Robotics software engineer.
 
 # CV
-Todo
+2018-2020 University of Tokyo, MSc
+
+2020-2023 Sony, R&D engineer
+
+2023-2027? Taltech, PhD student
 
 # Research Project
 
