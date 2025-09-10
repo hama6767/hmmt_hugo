@@ -8,7 +8,7 @@ book = true
 PhD student at Taltech. Robotics software engineer.
 
 # CV
-2018-2020 University of Tokyo, MSc
+2018-2020 University of Tokyo, MS
 
 2020-2023 Sony, R&D engineer
 
