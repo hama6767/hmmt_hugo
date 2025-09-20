@@ -8,13 +8,22 @@ book = true
 PhD student at Taltech. Robotics software engineer.
 
 # CV
-2018-2020 University of Tokyo, MS
+
+## Work experience
 
 2020-2023 Sony, R&D engineer
 
-2023-2027? Taltech, PhD student
+## Education
+
+2014-2018 Doshisha University, BCs, Kyoto, Japan
+
+2018-2020 University of Tokyo, MS, Tokyo, Japan
+
+2023-2027? Taltech, PhD student, Tallinn, Estonia
 
 # Research Project
+
+Keyword: Robot control, marine robot, robot software architecture, reinforcement learning
 
 | Fig                   |Conf/journal     | Title       |
 |-----------------------|-----------------|-------------|
