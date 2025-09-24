@@ -1,10 +1,11 @@
 theme = "Relearn"
 baseURL = 'https://hmmt.ee/'
 languageCode = 'en-us'
-title = 'Y.HMMT'
-alwaysopen = true
-collapsibleMenu = true
-themeVariant = 'blue'
+title = 'Y.HMMT'z
+[params]
+  alwaysopen = true
+  collapsibleMenu = true
+  themeVariant = 'blue'
   
 [module]
   [[module.imports]]
