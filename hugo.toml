@@ -6,6 +6,7 @@ title = 'Y.HMMT'
   [params.relearn]
     alwaysopen = true
     collapsibleMenu = true
+    themeVariant = 'blue'
   
 [module]
   [[module.imports]]
