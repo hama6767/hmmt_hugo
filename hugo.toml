@@ -1,7 +1,7 @@
 theme = "Relearn"
 baseURL = 'https://hmmt.ee/'
 languageCode = 'en-us'
-title = 'Y.HMMT'z
+title = 'Y.HMMT'
 [params]
   alwaysopen = true
   collapsibleMenu = true
