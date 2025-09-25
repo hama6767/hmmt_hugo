@@ -7,6 +7,8 @@ book = true
 
 PhD student at Taltech. Robotics software engineer.
 
+[GitHub](https://github.com/hama6767) | [LinkedIn](https://www.linkedin.com/in/yuya-hamamatsu-009759167/) | [Google Scholar](https://scholar.google.co.jp/citations?user=mjZQ0KIAAAAJ&hl=en) | [Lab website](https://taltech.ee/en/biorobotics) | 
+
 # CV
 
 ## Work experience
@@ -19,11 +21,15 @@ PhD student at Taltech. Robotics software engineer.
 
 2018-2020 University of Tokyo, MS, Tokyo, Japan
 
-2023-2027? Taltech, PhD student, Tallinn, Estonia
+2023-2027? [Taltech](https://taltech.ee/en/biorobotics), PhD student, Tallinn, Estonia
 
 # Research Project
 
 Keyword: Robot control, marine robot, robot software architecture, reinforcement learning
+
+You can find all my papers from [Google Scholar](https://scholar.google.co.jp/citations?user=mjZQ0KIAAAAJ&hl=en).
+
+### Highlighted Papers
 
 | Fig                   |Conf/journal     | Title       |
 |-----------------------|-----------------|-------------|
