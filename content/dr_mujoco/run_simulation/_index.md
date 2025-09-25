@@ -7,7 +7,7 @@ weight = 5
 +++
 
 
-## How to Run the Simulation with a ROS 2 Launch File 🚀
+## How to Run the Simulation with a ROS 2 Launch File
 
 A ROS 2 **Launch File** is a powerful tool for automating the startup and configuration of nodes. It allows you to run complex applications with a single, reproducible command.
 
