@@ -1,236 +1,146 @@
 +++
 date = '2025-02-10T10:50:46+02:00'
 draft = false
-title = 'Make your robot model'
+title = 'Run a simulation'
 math = true
-weight = 1
+weight = 4
 +++
 
-Of course. Here is the guide in English.
+
+## How to Run the Simulation with a ROS 2 Launch File 🚀
+
+A ROS 2 **Launch File** is a powerful tool for automating the startup and configuration of nodes. It allows you to run complex applications with a single, reproducible command.
+
+This page breaks down a sample launch file to explain how it works and provides the steps to run your simulation.
 
 -----
 
-# How to Create MuJoCo XML Files 🤖
+## Understanding the Launch File
 
-This is a step-by-step guide for beginners on how to create the MuJoCo XML files used in this simulator.
+Below is a typical launch file for starting the simulation. Let's break down what each part of the code does.
+
+**`your_launch_file.launch.py`:**
+
+```python
+import os
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch.substitutions import LaunchConfiguration
+
+def generate_launch_description():
+    mujoco_pkg_share = get_package_share_directory('dr_mujoco')
+    simulation_launch_path = os.path.join(
+        mujoco_pkg_share, 'launch', 'default.launch.py'
+    )
+
+    package_path = get_package_share_directory('<your_package_name>')
+    robot_model_path_arg = DeclareLaunchArgument(
+        'robot_model',
+        default_value=os.path.join(package_path, 'mujoco', '<your_robot_model>.xml')
+    )
+
+    simulation_include = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(simulation_launch_path),
+        launch_arguments={
+            'robot': LaunchConfiguration('robot_model')
+        }.items()
+    )
+
+    return LaunchDescription([
+        robot_model_path_arg,
+        simulation_include,
+    ])
+```
+
+### 1\. Defining a Launch Argument (`DeclareLaunchArgument`)
+
+This part is the key to the launch file's flexibility.
+
+```python
+    robot_model_path_arg = DeclareLaunchArgument(
+        'robot_model',
+        default_value=os.path.join(package_path, 'mujoco', '<your_robot_model>.xml')
+    )
+```
+
+  - **`DeclareLaunchArgument`** defines an **argument** that can be passed from the command line when you run `ros2 launch`.
+  - Here, we define an argument named `robot_model`.
+  - The **`default_value`** is the value used automatically if no argument is provided. This lets you set a commonly used model as the default.
+  - This feature allows you to change which model is loaded by simply adding `robot_model:=/path/to/another.xml` to your launch command.
+
+### 2\. Including Another Launch File (`IncludeLaunchDescription`)
+
+Launch files can call, or "include," other launch files to reuse functionality.
+
+```python
+    simulation_include = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(simulation_launch_path),
+        launch_arguments={
+            'robot': LaunchConfiguration('robot_model')
+        }.items()
+    )
+```
+
+  - **`IncludeLaunchDescription`** is an action that starts another launch file (in this case, the main simulator, `default.launch.py`).
+  - The most important part is **`launch_arguments`**. This specifies the arguments to pass to the included launch file.
+  - The line `'robot': LaunchConfiguration('robot_model')` means: "Take the value of our local `robot_model` argument and pass it to the `robot` argument that `default.launch.py` expects."
+
+This makes your launch file act as a "configuration bridge" between the main simulator and your specific robot model.
 
 -----
 
-## What is a MuJoCo XML File?
+## Steps to Run the Simulation
 
-MuJoCo (**Mu**lti-**Jo**int dynamics with **Co**ntact) is an advanced physics simulation engine. The **XML file** is what defines the simulation environment, including the world, the robot's shape, its weight, and how its joints move.
+### Step 1: Prepare Your File and Folder Structure
 
-For this simulator, you will primarily prepare two XML files:
+To run correctly, your files must be placed in specific locations within your package.
 
-  * `world.xml`: Defines the **environment**, such as the ground and lighting.
-  * `robot.xml`: Defines the **robot model** that you will control in the simulation.
+```
+colcon_ws/
+└── src/
+    └── <your_package_name>/
+        ├── launch/
+        │   └── <your_launch_file_name>.launch.py  <-- Save the code here
+        ├── mujoco/
+        │   └── <your_robot_model>.xml             <-- Your robot model
+        └── ...
+```
 
-When the program starts, these two files are automatically merged to create a single simulation world.
+### Step 2: Build Your Workspace
+
+After adding the new launch file, you need to build your workspace so ROS 2 can find it. Run this command from the root of your workspace (e.g., `colcon_ws/`).
+
+```bash
+colcon build --packages-select <your_package_name>
+```
+
+### Step 3: Source Your Environment
+
+Once the build is complete, source the setup file to make your package available in the current terminal.
+
+```bash
+source install/setup.bash
+```
+
+### Step 4: Launch the Simulation
+
+Now you are ready to go. Run the following command to start the simulation:
+
+```bash
+ros2 launch <your_package_name> <your_launch_file_name>.launch.py
+```
+
+If successful, the MuJoCo viewer window will open, displaying the robot defined in your `<your_robot_model>.xml` file.
 
 -----
 
-## Basic Structure of an XML File
+### (Advanced) Dynamically Specifying a Model from the Command Line
 
-An XML file is made up of elements enclosed in `<tag>` and `</tag>`. A MuJoCo XML file generally has the following structure:
+Thanks to `DeclareLaunchArgument`, you can switch models at runtime without editing any files.
 
-```xml
-<mujoco model="model_name">
-
-  <asset>
-    </asset>
-
-  <worldbody>
-    </worldbody>
-
-  <actuator>
-    </actuator>
-
-</mujoco>
+```bash
+ros2 launch <your_package_name> <your_launch_file_name>.launch.py \
+  robot_model:='<path/to/your/other_robot.xml>'
 ```
-
------
-
-## Step-by-Step Creation Guide
-
-### Step 1: Create the World (`world.xml`)
-
-First, let's build the environment where the robot will be placed. At a minimum, you need **ground** and a **light source**.
-
-**Example `world.xml`:**
-
-```xml
-<mujoco model="my_world">
-  <worldbody>
-    <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1"/>
-
-    <geom name="floor" type="plane" size="5 5 0.1" rgba="0.8 0.9 0.8 1"/>
-  </worldbody>
-</mujoco>
-```
-
-  * **`<light>`**: Illuminates the scene.
-  * **`<geom>`**: Short for "geometry," this defines the shape of an object. Here, `type="plane"` creates the ground.
-      * **`name`**: A unique name for the element.
-      * **`type`**: The type of shape (`plane`, `box`, `sphere`, `cylinder`, etc.).
-      * **`size`**: The dimensions of the shape.
-      * **`rgba`**: The color and transparency (Red, Green, Blue, Alpha).
-
-### Step 2: Create the Robot (`robot.xml`)
-
-This is the main part\! We will assemble the robot piece by piece. A robot is built using a nested structure of `<body>` elements.
-
-#### `<body>`: The Parts of the Robot
-
-A `<body>` element represents a part of the robot, like the chassis, a wheel, or an arm. The `pos` attribute specifies its position relative to its parent body.
-
-```xml
-<body name="base_link" pos="0 0 0.05">
-  <body name="left_wheel" pos="0 0.1 0">
-    </body>
-
-  <body name="right_wheel" pos="0 -0.1 0">
-    </body>
-</body>
-```
-
-#### `<joint>`: Connecting the Parts
-
-Joints define how bodies are connected to each other (e.g., whether they rotate or slide).
-
-```xml
-<body name="left_wheel" pos="0 0.1 0">
-  <joint name="base_to_left_wheel" type="hinge" axis="0 0 1"/>
-  ...
-</body>
-```
-
-  * **`name`**: The name of the joint. **This is crucial for linking it to a motor later.**
-  * **`type`**: The type of joint.
-      * `hinge`: A rotational joint (like a wheel or an elbow). `axis` defines the axis of rotation.
-      * `slide`: A linear (sliding) joint.
-      * `free`: Allows free movement and rotation in space. Often used for the root body of a robot.
-  * **`axis`**: The axis of rotation or movement (X Y Z).
-
-#### `<geom>`: Shape and Appearance
-
-Add a `<geom>` to each body to define its physical shape and appearance.
-
-```xml
-<body name="left_wheel" pos="0 0.1 0">
-  <joint ... />
-  <geom name="left_wheel_geom" type="cylinder" size="0.03 0.01" rgba="0 0 0 1"/>
-</body>
-```
-
-  * **`name`**: The name of the geometry. **The program uses this to get information.**
-  * **`size`**: The size, which depends on the shape. For a cylinder, it's "radius height."
-  * **`rgba`**: The color.
-
-#### `<inertial>`: Mass and Weight
-
-To make the physics simulation realistic, you must set the mass and inertia for each body.
-
-```xml
-<body name="base_link" pos="0 0 0.05">
-  <joint type="free"/>
-  <inertial pos="0 0 0" mass="0.1" diaginertia="0.01 0.01 0.01"/>
-  ...
-</body>
-```
-
-
-#### `<camera>`: The Visual Sensor 📷
-
-You can attach a camera to your robot to get images from within the simulation. A camera is defined by adding a `<camera>` tag inside the `<body>` where you want to attach it.
-
-**Example: Adding a camera to a "head" body**
-
-```xml
-<body name="head" pos="0.12 0 0.025">
-  <geom name="head_geom" type="box" size="0.015 0.015 0.015"/>
-
-  <camera name="front_camera" pos="0.015 0 0" euler="90 -90 0" fovy="60"/>
-</body>
-```
-
-  * **`name`**: The camera's name. **This is mandatory for the program to retrieve the image stream. Set it to `front_camera`.**
-  * **`pos`**: The relative position from the parent body (X Y Z).
-  * **`euler`**: The camera's orientation in Euler angles (in degrees), which defines its rotation around different axes.
-  * **`fovy`**: The vertical field of view. A larger value results in a wider-angle lens.
-
-**Note:** Please be aware that you need to add an argument when launching the simulator to enable the camera stream.
-
-#### `<actuator>`: The Driving Force
-
-Actuators define the motors that power the joints. They are grouped together in the `<actuator>` section.
-
-```xml
-<actuator>
-  <velocity name="left_wheel_vel" joint="base_to_left_wheel" kv="0.05"/>
-
-  <velocity name="right_wheel_vel" joint="base_to_right_wheel" kv="0.05"/>
-</actuator>
-```
-
-  * **`velocity`**: An actuator type that controls velocity.
-  * **`name`**: The name of the actuator. **The program uses this for control.**
-  * **`joint`**: **Specifies which joint to drive.** This must match the `name` of a `<joint>`.
-
------
-
-## Linking with the Program  **[MOST IMPORTANT]**
-
-The simulator's Python code identifies and controls parts of the robot using the specific **names (`name` attribute)** you write in the XML file. Therefore, the `name` in your XML **must exactly match** the definitions in the code.
-
-Here is the table showing the correspondence between the constants in the code and the `name` attributes in the XML.
-
-| Python Constant Name       | Corresponding XML `name` Attribute | What it Refers To        |
-|:---------------------------|:-----------------------------------|:-------------------------|
-| `LEFT_WHEEL_GEOM`          | `left_wheel_geom`                  | Left wheel's `<geom>`    |
-| `LEFT_WHEEL_BODY`          | `left_wheel`                       | Left wheel's `<body>`    |
-| `RIGHT_WHEEL_BODY`         | `right_wheel`                      | Right wheel's `<body>`   |
-| `FRONT_CAMERA`             | `front_camera`                     | The `<camera>`           |
-| `LEFT_WHEEL_JOINT`         | `base_to_left_wheel`               | Left wheel's `<joint>`   |
-| `RIGHT_WHEEL_JOINT`        | `base_to_right_wheel`              | Right wheel's `<joint>`  |
-| `LEFT_WHEEL_ACTUATOR`      | `left_wheel_vel`                   | Left wheel's `<actuator>`|
-| `RIGHT_WHEEL_ACTUATOR`     | `right_wheel_vel`                  | Right wheel's `<actuator>`|
-
-**Example: Left Wheel Definition**
-
-```xml
-<body name="left_wheel" pos="0 0.175 0">
-
-  <joint name="base_to_left_wheel" type="hinge" axis="0 0 1"/>
-
-  <geom name="left_wheel_geom" type="cylinder" size="0.036 0.004"/>
-
-</body>
-
-...
-
-<actuator>
-  <velocity name="left_wheel_vel" joint="base_to_left_wheel" />
-</actuator>
-```
-
-If this mapping is incorrect, the simulator will fail to start with an error like "`Could not find model component`."
-
------
-
-## Troubleshooting
-
-  * **Error: `Could not find model component: ...`**
-
-      * **Cause:** The Python code cannot find a `name` that it's looking for in your XML file.
-      * **Solution:** Check the table above and make sure all the `name` attributes in your XML file are correct. Check for typos.
-
-  * **The robot doesn't move.**
-
-      * **Cause:** The `<actuator>` configuration might be wrong.
-      * **Solution:** Ensure the `joint` attribute in your `<actuator>` tag exactly matches the `name` of the `<joint>` you want to move.
-
-  * **The robot sinks into the ground or flies away.**
-
-      * **Cause:** The physics properties (like mass in `<inertial>` or contact parameters in `<geom>`) might be inappropriate.
-      * **Solution:** Try adjusting the mass and other values, using the provided sample XML as a reference.
-
