@@ -3,7 +3,7 @@ date = '2025-02-10T10:50:46+02:00'
 draft = false
 title = 'Run a simulation'
 math = true
-weight = 4
+weight = 3
 +++
 
 

@@ -3,7 +3,7 @@ date = '2025-02-10T10:50:46+02:00'
 draft = false
 title = 'Get started'
 math = true
-weight = 0
+weight = 30
 +++
 
 ## Requirements
