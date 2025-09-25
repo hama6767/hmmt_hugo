@@ -7,7 +7,7 @@ weight = 5
 +++
 
 
-## How to Create MuJoCo XML Files 🤖
+## How to Create MuJoCo XML Files
 
 This is a step-by-step guide for beginners on how to create the MuJoCo XML files used in this simulator.
 
