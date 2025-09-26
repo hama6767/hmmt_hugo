@@ -7,7 +7,7 @@ book = true
 
 PhD student at Taltech. Robotics software engineer.
 
-[GitHub](https://github.com/hama6767) | [LinkedIn](https://www.linkedin.com/in/yuya-hamamatsu-009759167/) | [Google Scholar](https://scholar.google.co.jp/citations?user=mjZQ0KIAAAAJ&hl=en) | [Lab website](https://taltech.ee/en/biorobotics) | 
+| [etis](https://www.etis.ee/CV/Yuya_Hamamatsu001) | [GitHub](https://github.com/hama6767) | [LinkedIn](https://www.linkedin.com/in/yuya-hamamatsu-009759167/) | [Google Scholar](https://scholar.google.co.jp/citations?user=mjZQ0KIAAAAJ&hl=en) | [Lab website](https://taltech.ee/en/biorobotics) | 
 
 # CV
 
