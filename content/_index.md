@@ -16,12 +16,15 @@ PhD student at Taltech. Robotics software engineer.
 2020-2023 Sony, R&D engineer
 
 ## Education
+2023-2027? [Taltech](https://taltech.ee/en/biorobotics), PhD student, Tallinn, Estonia
+* 2024 Scuola Superiore Sant'Anna, Visiting Researcher, Pisa, Italy
+
+2018-2020 University of Tokyo, MS, Tokyo, Japan 
+* 2018 Texas A&M University, exchange student, TX, USA 
 
 2014-2018 Doshisha University, BCs, Kyoto, Japan
 
-2018-2020 University of Tokyo, MS, Tokyo, Japan
 
-2023-2027? [Taltech](https://taltech.ee/en/biorobotics), PhD student, Tallinn, Estonia
 
 # Research Project
 
