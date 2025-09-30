@@ -5,7 +5,7 @@ title = 'Yuya Hamamatsu'
 book = true
 +++
 
-PhD student at Taltech. Robotics software engineer.
+Yuya Hamamatsu is PhD student at Taltech. Robotics software engineer.
 
 | [etis](https://www.etis.ee/CV/Yuya_Hamamatsu001) | [GitHub](https://github.com/hama6767) | [LinkedIn](https://www.linkedin.com/in/yuya-hamamatsu-009759167/) | [Google Scholar](https://scholar.google.co.jp/citations?user=mjZQ0KIAAAAJ&hl=en) | [Lab website](https://taltech.ee/en/biorobotics) | 
 
@@ -13,7 +13,7 @@ PhD student at Taltech. Robotics software engineer.
 
 ## Work experience
 
-2020-2023 Sony, R&D engineer
+2020-2023 Sony, R&D engineer, Tokyo, Japan
 
 ## Education
 2023-2027? [Taltech](https://taltech.ee/en/biorobotics), PhD student, Tallinn, Estonia
@@ -23,6 +23,12 @@ PhD student at Taltech. Robotics software engineer.
 * 2018 Texas A&M University, exchange student, TX, USA 
 
 2014-2018 Doshisha University, BCs, Kyoto, Japan
+
+## Award
+* Award of Graduate School of Frontier Sciences, 2020
+* Toyota Dwango Advanced AI Human Resources Scholarship, 2019
+* Best Student Award at Texas A&M summer school, 2018
+* 1st prize of the Underwater Robots Competition OTO'18, 2018
 
 
 
@@ -40,3 +46,5 @@ You can find all my papers from [Google Scholar](https://scholar.google.co.jp/ci
 |![Image](https://github.com/user-attachments/assets/d0498a8c-aa81-47ad-89ae-5bbc8d711cba)             | RoboSoft 2025   | [Underwater Soft Fin Flapping Motion with Deep Neural Network Based Surrogate Model](research/robosoft2025.md)|
 
 
+# Other Information
+Open source simulator [DR_MuJoCo](https://hmmt.ee/dr_mujoco/)
