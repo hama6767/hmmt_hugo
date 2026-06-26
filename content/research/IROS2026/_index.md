@@ -3,7 +3,7 @@ date = '2026-06-26T12:00:00+02:00'
 draft = false
 title = 'IROS26'
 math = true
-weight = 4
+weight = -1
 +++
 
 ## Layout-independent actuation allocator for marine robots
