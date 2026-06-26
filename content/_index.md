@@ -25,6 +25,7 @@ Yuya Hamamatsu is PhD student at Taltech. Robotics software engineer.
 2014-2018 Doshisha University, BCs, Kyoto, Japan
 
 ## Award
+* 3rd place at IEEE OES ocean challenge, 2026
 * Award of Graduate School of Frontier Sciences, 2020
 * Toyota Dwango Advanced AI Human Resources Scholarship, 2019
 * Best Student Award at Texas A&M summer school, 2018
