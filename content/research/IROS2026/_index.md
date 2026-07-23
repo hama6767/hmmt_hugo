@@ -11,9 +11,9 @@ Yuya Hamamatsu, Maarja Kruusmaa, Asko Ristolainen
 
 [Tallinn University of Technology](https://taltech.ee/en/biorobotics)
 
-{{% button href="#" style="grey" icon="fa-fw fab fa-github" %}}Code (Coming soon){{% /button %}}
+{{% button href="https://github.com/Centre-for-Biorobotics/X-MART" style="grey" icon="fa-fw fab fa-github" %}}Code{{% /button %}}
 
-{{% button href="#" icon="fa-solid fa-file-pdf" style="warning" %}}arXiv{{% /button %}}
+{{% button href="https://arxiv.org/abs/2607.03204" icon="fa-solid fa-file-pdf" style="warning" %}}arXiv{{% /button %}}
 
 ### Abstract
 In this study, we propose a layout-independent control allocator capable of zero-shot deployment across diverse actuator configurations. The proposed method utilizes a learning pipeline that integrates a Graph Neural Network (GNN) and a Transformer to represent the robot's geometric layout as a graph, along with a Mixture Density Network (MDN) to predict multi-modal control command distributions. Furthermore, by incorporating a differentiable physics surrogate model, we achieve command refinement during inference to minimize target wrench tracking error and energy consumption. A single generalized model using randomly generated actuator layout data demonstrated high trajectory tracking performance on different actuator layout robots outside the training distribution. Additionally, in real-world pool experiments, our approach achieved performance nearly equivalent to conventional controllers designed to specific layouts.
