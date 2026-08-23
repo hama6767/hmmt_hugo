@@ -44,7 +44,7 @@ You can find all my papers from [Google Scholar](https://scholar.google.co.jp/ci
 | Fig                   |Conf/journal     | Title       |
 |-----------------------|-----------------|-------------|
 |![Image](https://github.com/user-attachments/assets/87fa9e0c-db3d-4c04-b43a-2b4a1ef39308) | IROS 2026 | [Layout-independent actuation allocator for marine robots](research/IROS2026.md)|
-|![Image](https://github.com/user-attachments/assets/47b359c1-922c-41ca-a494-23066fdc5e16) | JOE 2026 | [Strouhal-Aware Model Predictive Control for Efficient Multi-Fin Flapping Locomotion](research/JOE2026.md)|
+|![Image](https://github.com/user-attachments/assets/9a551180-f6ab-4d9d-9b87-6c0eb6f8c15d) | JOE 2026 | [Strouhal-Aware Model Predictive Control for Efficient Multi-Fin Flapping Locomotion](research/JOE2026.md)|
 |![Image](https://github.com/hama6767/pubdata/raw/main/Peek%202024-09-23%2015-22.gif?raw=true) | ICRA 2025  | [Cross-platform Learning-based Fault Tolerant Surfacing Controller for Underwater Robots ](research/ICRA2025.md)|
 |![Image](https://github.com/user-attachments/assets/d0498a8c-aa81-47ad-89ae-5bbc8d711cba)             | RoboSoft 2025   | [Underwater Soft Fin Flapping Motion with Deep Neural Network Based Surrogate Model](research/robosoft2025.md)|
 
