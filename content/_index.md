@@ -48,6 +48,9 @@ You can find all my papers from [Google Scholar](https://scholar.google.co.jp/ci
 |![Image](https://github.com/hama6767/pubdata/raw/main/Peek%202024-09-23%2015-22.gif?raw=true) | ICRA 2025  | [Cross-platform Learning-based Fault Tolerant Surfacing Controller for Underwater Robots ](research/ICRA2025.md)|
 |![Image](https://github.com/user-attachments/assets/d0498a8c-aa81-47ad-89ae-5bbc8d711cba)             | RoboSoft 2025   | [Underwater Soft Fin Flapping Motion with Deep Neural Network Based Surrogate Model](research/robosoft2025.md)|
 
+### Reviewing activity
+Nature Communications, ICRA, IROS, RA-L, T-MECH, IEEE Internet of Things Journal, IEEE OES Journal of Oceanic Engineering, Robosoft
 
 # Other Information
+
 Open source simulator [DR_MuJoCo](https://hmmt.ee/dr_mujoco/)
