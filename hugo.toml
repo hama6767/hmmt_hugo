@@ -10,3 +10,7 @@ title = 'Y.HMMT'
 [module]
   [[module.imports]]
     path = 'github.com/McShelby/hugo-theme-relearn'
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-D4D6Q8QZQM'
